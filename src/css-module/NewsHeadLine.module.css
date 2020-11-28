@@ -1,0 +1,56 @@
+.img{
+    height:300px;
+    width: 400px;
+    padding-top: 10px;
+   
+}
+
+.headlines{
+    border:3px solid black;
+    margin: 28px;
+    padding: 11px;
+    width: 60%;
+    cursor: pointer;
+    height:570px;
+    box-shadow: 10px 10px 10px 10px #888888;
+}
+h4{
+    font-family: cursive;
+    font-weight: normal;
+
+}
+
+h3{
+    font-weight: light;
+}
+#author{
+  margin-left: 50px;
+}
+@media only screen and (max-width: 600px) {
+  h3{
+      font-size: small;
+  }
+    .headlines{
+        border:3px solid black;
+        margin-top:100px;
+        width: 200%;
+        cursor: pointer;
+        margin-left: 22px;
+        margin-right: 14px;
+      
+
+    }
+    .img{
+        height:90px;
+        width: auto;
+        padding-left: 17px;
+        padding-right: 17px;
+       
+    }
+    h4{
+        font-family: cursive;
+        font-weight: 150;
+    
+    }
+    
+}

@@ -1,0 +1,110 @@
+.header{
+  display: flex;
+  background-color: whitesmoke;
+  border-bottom:  2px black solid;
+  position: fixed;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 42px;
+}
+.uk{
+  background-color: black;
+  color: white;
+  padding-left: 7px;
+  padding-right: 7px;
+  height: 34px;
+  
+}
+  .appname{
+    display: flex;
+    width: 200px;
+    margin-top: 13px;
+    margin-left: 20px;
+    
+  }
+  .date{  
+    margin-top: 20px;
+    margin-left:1171px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(230, 137, 137);
+  }
+
+  .searchBox{
+    float: right;
+    height: 25px;
+    width: 300px; 
+    margin-left: 10px;
+    
+  }
+  button{
+    height: 32px;
+   
+  }
+  @-moz-document url-prefix() {
+    .date {
+      margin-top: 20px;
+      margin-left:1165px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: rgb(230, 137, 137);
+    }
+  }
+  .nav{
+    height: 25px;
+    display: flex;
+    margin-top: 70px;
+    position: fixed;  
+    display: flex; 
+}
+li{
+   width: auto;
+   margin-right: 40px;
+   list-style: square;
+   font-weight: bold; 
+}
+li:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border:3px solid rgb(248, 214, 162);
+    border-radius: 37px;
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+  .uk{
+    background-color: black;
+    color: white;
+    height: 30px;
+   
+  }
+  
+  .header{
+    display: block;
+    background-color: whitesmoke;
+    border-bottom:  1px black solid;
+    position: fixed;
+    height: 38px;
+   
+  }
+  .nav{
+    height: 0px;
+    position: fixed;
+    display: block;
+}
+.date{
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 100px;
+}
+.searchBox{
+  height: 20px;
+  width: 120px; 
+  margin-left: 70px;
+  margin-bottom: 10px;
+  
+}
+button{
+  height: 32px;
+}
+}

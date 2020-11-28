@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React ,{ useEffect, useState ,useContext,createContext} from 'react'
 import './App.css';
+import Header from './components/Header';
+import NewsHeadlines from './components/NewsHeadlines';
+
 
 function App() {
+  var [url, setUrl] = useState("https://newsapi.org/v2/top-headlines?country=gb&apiKey=15b1ea3c48914ad08226be4179b25c79") 
+  var [newsData, setNewsData] = useState([])
+
+  useEffect(() => {
+    getNews(); 
+  },[url])
+
+  const getNews = async () => {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data)
+    setNewsData(data.articles);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>    
+      <Header url={setUrl}/>           
+      <div className="newLines">
+      {newsData.map(news=><NewsHeadlines key={news.title} headline={news}></NewsHeadlines>)}
+      </div>
+    </React.Fragment>
   );
 }
 
