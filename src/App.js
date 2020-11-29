@@ -2,6 +2,7 @@ import React ,{ useEffect, useState ,useContext,createContext} from 'react'
 import './App.css';
 import Header from './components/Header';
 import NewsHeadlines from './components/NewsHeadlines';
+import NoNewComponent from './components/NoNewComponent';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <React.Fragment>    
       <Header url={setUrl}/>           
       <div className="newLines">
+        {newsData.length==0 &&  <NoNewComponent></NoNewComponent>}
       {newsData.map(news=><NewsHeadlines key={news.title} headline={news}></NewsHeadlines>)}
       </div>
     </React.Fragment>
