@@ -9,7 +9,7 @@ export default function NewsHeadlines(props) {
             <h3>{props.headline.title}</h3>
             <h4>{props.headline.content}</h4>
             <img src={props.headline.urlToImage} className={Style.img} />
-            <figcaption id="author">~{props.headline.author}</figcaption>
+            <figcaption id="author">~{props.headline.author ? props.headline.author:"Confidential"}</figcaption>
         </div>
     )
 }
