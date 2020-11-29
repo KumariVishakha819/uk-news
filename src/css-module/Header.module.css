@@ -75,7 +75,7 @@ li:hover{
   .uk{
     background-color: black;
     color: white;
-    height: 30px;
+    height: 32px;
    
   }
   
@@ -84,26 +84,20 @@ li:hover{
     background-color: whitesmoke;
     border-bottom:  1px black solid;
     position: fixed;
-    height: 38px;
+    height: 41px;
    
   }
   .nav{
     height: 0px;
     position: fixed;
-    display: block;
+    display: none;
 }
 .date{
-  display: inline-block;
-  font-size: 12px;
+  display: flex;
+  font-size: 5px;
   margin-bottom: 100px;
 }
-.searchBox{
-  height: 20px;
-  width: 120px; 
-  margin-left: 70px;
-  margin-bottom: 10px;
-  
-}
+
 button{
   height: 32px;
 }
