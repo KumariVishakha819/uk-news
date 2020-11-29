@@ -24,9 +24,10 @@ function App() {
     <React.Fragment>    
       <Header url={setUrl}/>           
       <div className="newLines">
-        {newsData.length==0 &&  <NoNewComponent></NoNewComponent>}
+        
       {newsData.map(news=><NewsHeadlines key={news.title} headline={news}></NewsHeadlines>)}
-      </div>
+      {newsData.length==0 &&  <NoNewComponent></NoNewComponent>}
+ </div>
     </React.Fragment>
   );
 }
