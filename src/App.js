@@ -24,7 +24,7 @@ function App() {
       <div className="newLines">     
       {newsData.map(news=><NewsHeadlines key={news.title} headline={news}></NewsHeadlines>)}
       {newsData.length==0 &&  <NoNewComponent></NoNewComponent>}
- </div>
+     </div>
     </React.Fragment>
   );
 }

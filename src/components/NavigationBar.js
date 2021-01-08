@@ -3,12 +3,9 @@ import '../App.css';
 export default function NavigationBar(props) {
 
     var [selectedCategory, setSelectedCategory] = useState('')
-
+    
     function updateUrl($event) {
-        let categoryId = $event.target.id
-        if (selectedCategory != '') {
-            document.getElementById(selectedCategory).setAttribute("style", "all:revert")
-        }
+        let categoryId = $event.target.id      
         document.getElementById($event.target.id).setAttribute("style",
             "background-color: black;color: white;cursor: pointer;border:3px solid rgb(248, 214, 162);border-radius: 37px;");
         setSelectedCategory(categoryId)
